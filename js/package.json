@@ -27,7 +27,7 @@
     }
   },
   "bin": {
-    "qroid-qr": "./bin/qroid-qr.js"
+    "qroid-qr": "bin/qroid-qr.js"
   },
   "files": [
     "src",
@@ -58,7 +58,7 @@
   "homepage": "https://qroid.com/en/developers",
   "repository": {
     "type": "git",
-    "url": "https://github.com/qroid-com/qroid-qr.git",
+    "url": "git+https://github.com/qroid-com/qroid-qr.git",
     "directory": "js"
   },
   "engines": {
