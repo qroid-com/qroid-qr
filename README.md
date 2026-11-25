@@ -152,23 +152,9 @@ npx qroid-qr "qroid.com" --ascii
 npx qroid-qr "https://qroid.com" --style round --color "#173DA6" --background "#EEF4FF" --level H --svg qr.svg --png qr.png
 ```
 
-Generated compact Unicode output (`qroid.com` — true 1:1 square aspect ratio, scannable in dark terminals):
+Generated terminal output (`qroid-qr` renders compact half-block Unicode in real terminals):
 
-```text
-█████████████████████████
-██ ▄▄▄▄▄ █▀▀▄▄ █ ▄▄▄▄▄ ██
-██ █   █ ██ ▄▄▀█ █   █ ██
-██ █▄▄▄█ █▄ ▀█ █ █▄▄▄█ ██
-██▄▄▄▄▄▄▄█▄█ ▀ █▄▄▄▄▄▄▄██
-██▄▀▄█▄▀▄██ ▄▄██▀▀ ▀█▄▀██
-██▀▄▀█  ▄▄█▄▄█▄▄█▄ ██▄▄██
-██▄▄▄▄█▄▄▄▀█▀▀▄█▀▀ █▀█ ██
-██ ▄▄▄▄▄ ██▀▄ ▀ ▄  ▄█▄▄██
-██ █   █ █▄▄▄▄██  ▀▀▀▀███
-██ █▄▄▄█ █▄█▀█▄█▀▀▄▄▄▀▄██
-██▄▄▄▄▄▄▄█▄▄██▄█▄▄▄██▄▄██
-█████████████████████████
-```
+<img src="./assets/terminal-preview.svg" width="460" alt="Terminal QR preview" />
 
 ---
 
