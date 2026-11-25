@@ -1,5 +1,5 @@
 node_modules/
-dist/
+python/dist/
 *.tgz
 __pycache__/
 *.py[cod]

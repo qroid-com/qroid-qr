@@ -1,8 +1,8 @@
 # qroid-qr
 
-**Zero-dependency QR code generator** for **Node.js**, **React**, **React Native**, **Browser**, and **Python**.
+**Zero-dependency QR code generator** for **Static HTML Sites (`<qroid-qr>`)**, **Node.js**, **React**, **React Native**, **Browser**, and **Python**.
 
-Built by **[Qroid](https://qroid.com)** — ultra-lightweight (~15 KB npm pack), sub-millisecond SVG/ASCII, pure-stdlib PNG, and clean `square` / `round` styles.
+Built by **[Qroid](https://qroid.com)** — ultra-lightweight (**8.0 KB gzip** standalone script / ~15 KB npm pack), sub-millisecond SVG, pure-stdlib PNG, and clean `square` / `round` styles.
 
 > Need logos, frames, gradients, dynamic URLs, or scan analytics? Use the full **[Qroid Online Designer →](https://qroid.com/generate)**
 
@@ -23,8 +23,9 @@ All 4 SVG previews below are generated directly by `qroid-qr` (stored in [`./ass
 
 | Directory | Registry | Install | Targets | Runtime deps |
 | :--- | :--- | :--- | :--- | :---: |
-| [`./js`](./js) | npm | `npm i qroid-qr` | Node, Browser, React, React Native, CLI | **0** |
+| [`./js`](./js) | npm / CDN | `npm i qroid-qr` | Static HTML (`<qroid-qr>`), Node, Browser, React, RN, CLI | **0** |
 | [`./python`](./python) | PyPI | `pip install qroid-qr` | Python ≥ 3.9, CLI | **0** |
+| [`./docs`](./docs) | GitHub Pages | Static playground | Interactive Web Demo (`docs/index.html`) | **0** |
 
 ---
 
@@ -43,6 +44,32 @@ Outputs (`svg`, `pngBuffer` / `png_bytes`, `pngBase64`, `svgBase64`, `ascii`) ar
 ---
 
 ## Quick Start
+
+### 0. Static HTML Website (No npm, no build step — 8 KB gzip)
+
+Drop one `<script>` tag into any static HTML page (WordPress, Webflow, Shopify, plain `.html`) and use the `<qroid-qr>` Web Component:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/qroid-qr/dist/qroid-qr.min.js"></script>
+
+<qroid-qr
+  value="https://qroid.com"
+  shape="round"
+  size="200"
+  color="#173DA6"
+  background="#EEF4FF"
+  level="H"
+></qroid-qr>
+```
+
+Or use `window.QroidQr` / `data-qroid-qr` attributes:
+
+```html
+<div data-qroid-qr="https://qroid.com" data-style="round" data-size="180"></div>
+<script>
+  const { svg, svgDataUrl } = QroidQr.createQr("https://qroid.com", { style: "round" });
+</script>
+```
 
 ### 1. Node.js
 

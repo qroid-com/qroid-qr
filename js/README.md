@@ -38,6 +38,7 @@ npm install react-native-svg
 | Import | Environment | Outputs / Exports |
 | :--- | :--- | :--- |
 | `qroid-qr` | Node.js ≥ 18 | `createQr` → `svg`, `svgBase64`, `svgDataUrl`, `pngBuffer`, `pngBase64`, `ascii` |
+| `qroid-qr/standalone` | Static HTML / CDN (`8 KB` gzip) | `<qroid-qr>` Web Component, `[data-qroid-qr]`, `window.QroidQr` |
 | `qroid-qr/browser` | Browser / Edge / Workers | `createQr` → `svg`, `svgBase64`, `svgDataUrl`, `ascii` (no `node:zlib`) |
 | `qroid-qr/react` | React ≥ 17 (Web / SSR) | `<QrCode />`, `useQr`, `createQr` |
 | `qroid-qr/react-native` | React Native + Expo | `<QrCode />`, `useQr`, `createQr` |
@@ -45,6 +46,29 @@ npm install react-native-svg
 ---
 
 ## Usage Examples
+
+### Static HTML Website (CDN / No Build Step)
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/qroid-qr/dist/qroid-qr.min.js"></script>
+
+<!-- Declarative Web Component -->
+<qroid-qr
+  value="https://qroid.com"
+  shape="round"
+  size="200"
+  color="#173DA6"
+  background="#EEF4FF"
+  level="H"
+></qroid-qr>
+
+<!-- Or global JS API -->
+<script>
+  const qr = QroidQr.createQr("https://qroid.com", { style: "round", size: 200 });
+  // Also includes Canvas PNG export in browsers:
+  // const pngDataUrl = await QroidQr.toPngDataUrl("https://qroid.com", { style: "round" });
+</script>
+```
 
 ### Node.js — SVG, PNG Buffer, Base64 & ASCII
 
