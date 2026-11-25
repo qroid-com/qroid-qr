@@ -1,5 +1,10 @@
 # qroid-qr
 
+[![npm version](https://img.shields.io/npm/v/qroid-qr?color=173DA6&label=npm)](https://www.npmjs.com/package/qroid-qr)
+[![PyPI version](https://img.shields.io/pypi/v/qroid-qr?color=173DA6&label=pypi)](https://pypi.org/project/qroid-qr/)
+[![jsDelivr CDN](https://data.jsdelivr.com/v1/package/npm/qroid-qr/badge)](https://www.jsdelivr.com/package/npm/qroid-qr)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+
 **Zero-dependency QR code generator** for **Static HTML Sites (`<qroid-qr>`)**, **Node.js**, **React**, **React Native**, **Browser**, and **Python**.
 
 Built by **[Qroid](https://qroid.com)** — ultra-lightweight (**8.0 KB gzip** standalone script / ~15 KB npm pack), sub-millisecond SVG, pure-stdlib PNG, and clean `square` / `round` styles.
