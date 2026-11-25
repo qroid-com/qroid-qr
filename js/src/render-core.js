@@ -154,17 +154,25 @@ export function matrixToSvg(qr, opts) {
 }
 
 /**
- * ASCII is always square blocks (style only affects SVG/PNG).
+ * Compact half-block Unicode QR (2 vertical modules per row, white quiet-zone plate).
+ * Renders at a true 1:1 square aspect ratio in terminals & GitHub code blocks,
+ * and scans reliably on dark backgrounds (dark mode terminals / GitHub).
  * @param {{ data: boolean[][] }} qr
  */
 export function matrixToAscii(qr) {
   const data = qr.data;
-  const lines = new Array(data.length);
-  for (let y = 0; y < data.length; y++) {
-    const row = data[y];
+  const n = data.length;
+  const lines = [];
+  for (let y = 0; y < n; y += 2) {
+    const topRow = data[y];
+    const botRow = y + 1 < n ? data[y + 1] : null;
     let s = "";
-    for (let x = 0; x < row.length; x++) s += row[x] ? "██" : "  ";
-    lines[y] = s;
+    for (let x = 0; x < n; x++) {
+      const t = topRow[x];
+      const b = botRow ? botRow[x] : false;
+      s += !t && !b ? "█" : !t && b ? "▀" : t && !b ? "▄" : " ";
+    }
+    lines.push(s);
   }
   return lines.join("\n");
 }

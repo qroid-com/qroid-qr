@@ -60,7 +60,7 @@ dark = create_qr(
 Path("qr-dark.svg").write_text(dark.svg, encoding="utf-8")
 
 # 3) Terminal ASCII (~1.4ms — skips PNG/SVG generation)
-print(create_qr("qroid.com", padding=1).ascii)
+print(create_qr("qroid.com").ascii)
 ```
 
 ### FastAPI / Flask endpoint example
@@ -83,7 +83,7 @@ def qr_png(url: str = "https://qroid.com", style: str = "round"):
 
 ```bash
 # Print ASCII QR in terminal
-qroid-qr "qroid.com" --padding 1 --ascii
+qroid-qr "qroid.com" --ascii
 
 # Write SVG + PNG files
 qroid-qr "https://qroid.com" --style round --color "#173DA6" --background "#EEF4FF" --level H --svg qr.svg --png qr.png
@@ -93,27 +93,19 @@ qroid-qr "https://qroid.com" --style round --base64 png
 ```
 
 ```text
-  ██████████████      ██████  ██████████████  
-  ██          ██  ████    ██  ██          ██  
-  ██  ██████  ██    ██████    ██  ██████  ██  
-  ██  ██████  ██    ██    ██  ██  ██████  ██  
-  ██  ██████  ██  ████    ██  ██  ██████  ██  
-  ██          ██    ████  ██  ██          ██  
-  ██████████████  ██  ██  ██  ██████████████  
-                      ██████                  
-  ██  ██  ██  ██    ██████        ██    ██    
-    ██      ██      ██        ████████    ██  
-    ██    ████████  ████  ████  ████    ████  
-  ██  ██  ████                    ██          
-  ████████  ██████        ██      ██      ██  
-                  ██  ████    ██████  ██  ██  
-  ██████████████      ████  ██████████  ████  
-  ██          ██    ██  ██████  ████          
-  ██  ██████  ██  ████████    ████            
-  ██  ██████  ██              ████████████    
-  ██  ██████  ██  ██      ██      ██████  ██  
-  ██          ██      ██      ████      ██    
-  ██████████████  ████    ██  ██████    ████  
+█████████████████████████
+██ ▄▄▄▄▄ █▀▀▄▄ █ ▄▄▄▄▄ ██
+██ █   █ ██ ▄▄▀█ █   █ ██
+██ █▄▄▄█ █▄ ▀█ █ █▄▄▄█ ██
+██▄▄▄▄▄▄▄█▄█ ▀ █▄▄▄▄▄▄▄██
+██▄▀▄█▄▀▄██ ▄▄██▀▀ ▀█▄▀██
+██▀▄▀█  ▄▄█▄▄█▄▄█▄ ██▄▄██
+██▄▄▄▄█▄▄▄▀█▀▀▄█▀▀ █▀█ ██
+██ ▄▄▄▄▄ ██▀▄ ▀ ▄  ▄█▄▄██
+██ █   █ █▄▄▄▄██  ▀▀▀▀███
+██ █▄▄▄█ █▄█▀█▄█▀▀▄▄▄▀▄██
+██▄▄▄▄▄▄▄█▄▄██▄█▄▄▄██▄▄██
+█████████████████████████
 ```
 
 ---
@@ -138,7 +130,7 @@ qroid-qr "https://qroid.com" --style round --base64 png
 - `qr.svg_base64` → `str` (`data:image/svg+xml;base64,...`)
 - `qr.png_bytes` → `bytes` (raw PNG binary)
 - `qr.png_base64` → `str` (`data:image/png;base64,...`)
-- `qr.ascii` → `str` (square `██` terminal blocks)
+- `qr.ascii` → `str` (compact half-block Unicode `▀ ▄ █` terminal QR)
 - `qr.size`, `qr.style`, `qr.level`, `qr.padding`
 
 ## License

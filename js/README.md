@@ -69,7 +69,7 @@ writeFileSync("qr-brand.png", brand.pngBuffer);
 console.log(brand.pngBase64); // data:image/png;base64,...
 
 // 3) Instant terminal preview (~0.3ms, skips PNG/SVG)
-console.log(createQr("qroid.com", { padding: 1 }).ascii);
+console.log(createQr("qroid.com").ascii);
 ```
 
 ### React (Web / Next.js)
@@ -148,7 +148,7 @@ document.getElementById("qr").src = qr.svgDataUrl;
 
 ```bash
 # Terminal ASCII
-npx qroid-qr "qroid.com" --padding 1 --ascii
+npx qroid-qr "qroid.com" --ascii
 
 # Export files
 npx qroid-qr "https://qroid.com" --style round --color "#173DA6" --svg out.svg --png out.png
@@ -158,27 +158,19 @@ npx qroid-qr "https://qroid.com" --style round --base64 png
 ```
 
 ```text
-  ██████████████      ██████  ██████████████  
-  ██          ██  ████    ██  ██          ██  
-  ██  ██████  ██    ██████    ██  ██████  ██  
-  ██  ██████  ██    ██    ██  ██  ██████  ██  
-  ██  ██████  ██  ████    ██  ██  ██████  ██  
-  ██          ██    ████  ██  ██          ██  
-  ██████████████  ██  ██  ██  ██████████████  
-                      ██████                  
-  ██  ██  ██  ██    ██████        ██    ██    
-    ██      ██      ██        ████████    ██  
-    ██    ████████  ████  ████  ████    ████  
-  ██  ██  ████                    ██          
-  ████████  ██████        ██      ██      ██  
-                  ██  ████    ██████  ██  ██  
-  ██████████████      ████  ██████████  ████  
-  ██          ██    ██  ██████  ████          
-  ██  ██████  ██  ████████    ████            
-  ██  ██████  ██              ████████████    
-  ██  ██████  ██  ██      ██      ██████  ██  
-  ██          ██      ██      ████      ██    
-  ██████████████  ████    ██  ██████    ████  
+█████████████████████████
+██ ▄▄▄▄▄ █▀▀▄▄ █ ▄▄▄▄▄ ██
+██ █   █ ██ ▄▄▀█ █   █ ██
+██ █▄▄▄█ █▄ ▀█ █ █▄▄▄█ ██
+██▄▄▄▄▄▄▄█▄█ ▀ █▄▄▄▄▄▄▄██
+██▄▀▄█▄▀▄██ ▄▄██▀▀ ▀█▄▀██
+██▀▄▀█  ▄▄█▄▄█▄▄█▄ ██▄▄██
+██▄▄▄▄█▄▄▄▀█▀▀▄█▀▀ █▀█ ██
+██ ▄▄▄▄▄ ██▀▄ ▀ ▄  ▄█▄▄██
+██ █   █ █▄▄▄▄██  ▀▀▀▀███
+██ █▄▄▄█ █▄█▀█▄█▀▀▄▄▄▀▄██
+██▄▄▄▄▄▄▄█▄▄██▄█▄▄▄██▄▄██
+█████████████████████████
 ```
 
 ---

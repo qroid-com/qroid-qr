@@ -172,8 +172,26 @@ def matrix_to_svg(
 
 
 def matrix_to_ascii(matrix: Sequence[Sequence[bool]]) -> str:
-    """ASCII is always square blocks (style only affects SVG/PNG)."""
-    return "\n".join("".join("██" if c else "  " for c in row) for row in matrix)
+    """Compact half-block Unicode QR (true 1:1 square aspect ratio, scannable on dark bg)."""
+    n = len(matrix)
+    lines: list[str] = []
+    for y in range(0, n, 2):
+        top_row = matrix[y]
+        bot_row = matrix[y + 1] if y + 1 < n else None
+        chars: list[str] = []
+        for x in range(n):
+            t = top_row[x]
+            b = bot_row[x] if bot_row is not None else False
+            if not t and not b:
+                chars.append("█")
+            elif not t and b:
+                chars.append("▀")
+            elif t and not b:
+                chars.append("▄")
+            else:
+                chars.append(" ")
+        lines.append("".join(chars))
+    return "\n".join(lines)
 
 
 def _png_chunk(tag: bytes, data: bytes) -> bytes:
