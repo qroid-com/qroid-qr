@@ -4,14 +4,27 @@
   "description": "Tiny zero-dependency QR code generator — square or round. Static HTML (<qroid-qr>), Node, Browser, React & React Native. From Qroid.",
   "type": "module",
   "main": "./src/index.js",
+  "types": "./src/index.d.ts",
   "unpkg": "./dist/qroid-qr.min.js",
   "jsdelivr": "./dist/qroid-qr.min.js",
   "exports": {
-    ".": "./src/index.js",
-    "./browser": "./src/browser.js",
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./browser": {
+      "types": "./src/browser.d.ts",
+      "default": "./src/browser.js"
+    },
     "./standalone": "./dist/qroid-qr.min.js",
-    "./react": "./src/react.js",
-    "./react-native": "./src/react-native.js"
+    "./react": {
+      "types": "./src/react.d.ts",
+      "default": "./src/react.js"
+    },
+    "./react-native": {
+      "types": "./src/react-native.d.ts",
+      "default": "./src/react-native.js"
+    }
   },
   "bin": {
     "qroid-qr": "./bin/qroid-qr.js"

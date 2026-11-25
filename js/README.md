@@ -7,7 +7,7 @@
 - **Fast & lazy**: ~0.3 ms ASCII, ~0.8 ms SVG, ~1.2 ms PNG — only computes the output you read
 - **Subpath exports**: `qroid-qr`, `qroid-qr/react`, `qroid-qr/react-native`, `qroid-qr/browser`
 
-Built by **[Qroid](https://qroid.com)** · Need logos, frames, dynamic QR codes, or scan analytics? **[Open Qroid Designer →](https://qroid.com/generate)**
+Built by **[Qroid](https://qroid.com)** · **[Live Playground & Docs →](https://qroid.com/en/developers)** · Need logos, frames, dynamic QR codes, or XLSX bulk QR generation? **[Open Qroid Designer →](https://qroid.com/en/generate)**
 
 ---
 
