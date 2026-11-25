@@ -84,16 +84,15 @@ def _round_eyes(n: int, padding: int) -> list[dict]:
     ]
     core = n - 2 * p
     if core >= 25:
-        cx = p + (core - 7) + 0.5
-        cy = p + (core - 7) + 0.5
+        ac = p + (core - 7)
         eyes.append(
             {
-                "minX": int(cx - 2.5),
-                "maxX": int(cx + 2.5),
-                "minY": int(cy - 2.5),
-                "maxY": int(cy + 2.5),
-                "cx": cx,
-                "cy": cy,
+                "minX": ac - 2,
+                "maxX": ac + 2,
+                "minY": ac - 2,
+                "maxY": ac + 2,
+                "cx": ac + 0.5,
+                "cy": ac + 0.5,
                 "kind": "align",
             }
         )

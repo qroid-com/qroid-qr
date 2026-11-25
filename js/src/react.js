@@ -21,7 +21,8 @@ import { createQr } from "./create-core.js";
  */
 
 /**
- * React (web) QR — renders as <img> with SVG data-URL (no Node deps).
+ * React (web / SSR / Next.js Server & Client Components) QR — renders as <img> with SVG data-URL.
+ * Does not call hooks inside `<QrCode />`, so it works out-of-the-box in React Server Components too!
  *
  * @param {QrCodeProps & Record<string, unknown>} props
  */
@@ -44,20 +45,16 @@ export function QrCode(props) {
     ...rest
   } = props;
 
-  const qr = useMemo(
-    () =>
-      createQr(value, {
-        size,
-        style: shape || style,
-        color,
-        foreground,
-        background,
-        padding,
-        level,
-        mask,
-      }),
-    [value, size, style, shape, color, foreground, background, padding, level, mask]
-  );
+  const qr = createQr(value, {
+    size,
+    style: shape || style,
+    color,
+    foreground,
+    background,
+    padding,
+    level,
+    mask,
+  });
 
   return createElement("img", {
     src: qr.svgDataUrl,

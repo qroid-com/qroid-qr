@@ -718,15 +718,14 @@ function roundEyes(n, padding) {
   }));
   const core = n - 2 * p;
   if (core >= 25) {
-    const cx = p + (core - 7) + 0.5;
-    const cy = p + (core - 7) + 0.5;
+    const ac = p + (core - 7);
     eyes.push({
-      minX: Math.floor(cx - 2.5),
-      maxX: Math.floor(cx + 2.5),
-      minY: Math.floor(cy - 2.5),
-      maxY: Math.floor(cy + 2.5),
-      cx,
-      cy,
+      minX: ac - 2,
+      maxX: ac + 2,
+      minY: ac - 2,
+      maxY: ac + 2,
+      cx: ac + 0.5,
+      cy: ac + 0.5,
       kind: "align",
     });
   }
