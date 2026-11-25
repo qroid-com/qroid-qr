@@ -20,6 +20,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://qroid.com"
+Documentation = "https://qroid.com/en/developers"
 Repository = "https://github.com/qroid-com/qroid-qr"
 
 [project.scripts]
