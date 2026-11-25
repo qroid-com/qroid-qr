@@ -1,0 +1,59 @@
+{
+  "name": "qroid-qr",
+  "version": "0.1.0",
+  "description": "Tiny QR code generator — square or round. Node, browser, React & React Native. From Qroid.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./browser": "./src/browser.js",
+    "./react": "./src/react.js",
+    "./react-native": "./src/react-native.js"
+  },
+  "bin": {
+    "qroid-qr": "./bin/qroid-qr.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "qr",
+    "qrcode",
+    "qroid",
+    "svg",
+    "png",
+    "ascii",
+    "react",
+    "react-native"
+  ],
+  "author": "Qroid",
+  "license": "MIT",
+  "homepage": "https://qroid.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qroid-com/qroid-qr.git",
+    "directory": "js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": ">=17",
+    "react-native-svg": ">=13"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-native-svg": {
+      "optional": true
+    }
+  }
+}

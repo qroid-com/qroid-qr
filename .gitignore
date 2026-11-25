@@ -1,0 +1,15 @@
+node_modules/
+dist/
+*.tgz
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+.venv/
+venv/
+python/.venv/
+.pytest_cache/
+.DS_Store
+*.png
+!docs/**/*.png
