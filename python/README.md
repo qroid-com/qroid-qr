@@ -14,7 +14,7 @@ Built by **[Qroid](https://qroid.com)** · Need logos, frames, dynamic QR codes,
 
 | `square` | `round` | Brand (`#173DA6`) | Dark mode |
 | :---: | :---: | :---: | :---: |
-| <img src="../assets/qr-square.svg" width="165" alt="Square QR" /> | <img src="../assets/qr-round.svg" width="165" alt="Round QR" /> | <img src="../assets/qr-brand.svg" width="165" alt="Brand QR" /> | <img src="../assets/qr-dark.svg" width="165" alt="Dark QR" /> |
+| <img src="https://raw.githubusercontent.com/qroid-com/qroid-qr/main/assets/qr-square.svg" width="165" alt="Square QR" /> | <img src="https://raw.githubusercontent.com/qroid-com/qroid-qr/main/assets/qr-round.svg" width="165" alt="Round QR" /> | <img src="https://raw.githubusercontent.com/qroid-com/qroid-qr/main/assets/qr-brand.svg" width="165" alt="Brand QR" /> | <img src="https://raw.githubusercontent.com/qroid-com/qroid-qr/main/assets/qr-dark.svg" width="165" alt="Dark QR" /> |
 
 ---
 
@@ -92,7 +92,7 @@ qroid-qr "https://qroid.com" --style round --color "#173DA6" --background "#EEF4
 qroid-qr "https://qroid.com" --style round --base64 png
 ```
 
-<img src="../assets/terminal-preview.svg" width="460" alt="Terminal QR preview" />
+<img src="https://raw.githubusercontent.com/qroid-com/qroid-qr/main/assets/terminal-preview.svg" width="460" alt="Terminal QR preview" />
 
 ---
 

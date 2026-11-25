@@ -4,7 +4,7 @@
 
 Built by **[Qroid](https://qroid.com)** — ultra-lightweight (**8.0 KB gzip** standalone script / ~15 KB npm pack), sub-millisecond SVG, pure-stdlib PNG, and clean `square` / `round` styles.
 
-> Need logos, frames, gradients, dynamic URLs, or scan analytics? Use the full **[Qroid Online Designer →](https://qroid.com/generate)**
+> **[Live Playground & Demo →](https://qroid-com.github.io/qroid-qr/)** · Need logos, frames, dynamic URLs, or scan analytics? **[Open Qroid Designer →](https://qroid.com/generate)**
 
 ---
 
@@ -25,7 +25,7 @@ All 4 SVG previews below are generated directly by `qroid-qr` (stored in [`./ass
 | :--- | :--- | :--- | :--- | :---: |
 | [`./js`](./js) | npm / CDN | `npm i qroid-qr` | Static HTML (`<qroid-qr>`), Node, Browser, React, RN, CLI | **0** |
 | [`./python`](./python) | PyPI | `pip install qroid-qr` | Python ≥ 3.9, CLI | **0** |
-| [`./docs`](./docs) | GitHub Pages | Static playground | Interactive Web Demo (`docs/index.html`) | **0** |
+| [`./docs`](./docs) | GitHub Pages | [qroid-com.github.io/qroid-qr](https://qroid-com.github.io/qroid-qr/) | Interactive Web Demo (`docs/index.html`) | **0** |
 
 ---
 
